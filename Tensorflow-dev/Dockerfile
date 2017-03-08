@@ -5,7 +5,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN pip install pep8 flake8 pyflakes isort yapf
 
-ADD config/.vimrc /root/.vimrc
+ADD .vimrc /root/.vimrc
 RUN timeout 5m vim || true
 
 CMD ["vim", "/src"]
